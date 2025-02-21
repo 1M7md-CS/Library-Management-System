@@ -1,0 +1,51 @@
++-----------------------------------------+
+|             <<interface>>               |
+|            LibraryInterface             |
++-----------------------------------------+
+| + addBook(): void                       |
+| + removeBook(): void                    |
+| + updateBook(): void                    |
+| + showBookList(): void                  |
+| + searchBook(): void                    |
+| + borrowingBook(): void                 |
++-----------------------------------------+
+                  ^
+                  |
+                  |
+         +-----------------------------------------+
+         |                Library                  |
+         +-----------------------------------------+
+         | - bookArrayList: List<Book>             |
+         | - reader: BufferedReader                |
+         +-----------------------------------------+
+         | + addBook(): void                       |
+         | + removeBook(): void                    |
+         | + updateBook(): void                    |
+         | + showBookList(): void                  |
+         | + searchBook(): void                    |
+         | + borrowingBook(): void                 |
+         +-----------------------------------------+
+                           |
+                           |
+                           |
+                           |
+         +----------------------------------------+
+         |                 Book                   |
+         +----------------------------------------+
+         | - bookId: String                       |
+         | - title: String                        |
+         | - author: String                       |
+         | - subject: String                      |
+         | - isBorrowed: boolean                  |
+         +----------------------------------------+
+         | + getBookId(): String                  |
+         | + getTitle(): String                   |
+         | + getAuthor(): String                  |
+         | + getSubject(): String                 |
+         | + isBorrowed(): boolean                |
+         | + setTitle(title: String): void        |
+         | + setAuthor(author: String): void      |
+         | + setSubject(subject: String): void    |
+         | + setBorrowed(borrowed: boolean): void |
+         | + printInfo(): void                    |
+         +----------------------------------------+
